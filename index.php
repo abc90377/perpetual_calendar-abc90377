@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PHP萬年曆</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -82,17 +82,17 @@ a:hover {
     echo '<br>';
     if ($month==12) {
         
-        echo '<div class=" d-lg-flex d-none col-lg-5 justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month='.($month-1)."&&year=".($year).'"'."><i class='fas fa-angle-left'></i></a></div>";
+        echo '<div class=" d-lg-flex d-none col-lg-5 justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month='.($month-1)."&&year=".($year).'"'."><i class='fas fa-angle-left'></i></a></div>";
         echo "<div class=' d-flex col-lg-2  justify-content-center align-items-center' style='font-size:42px;'>".date('F',strtotime("$year-$month"))."</div>";
-        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month=1'."&&year=".($year+1).'"'."><i class='fas fa-angle-right'></i></a></div>";
+        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month=1'."&&year=".($year+1).'"'."><i class='fas fa-angle-right'></i></a></div>";
     }elseif ($month==1) {
-        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month=12'."&&year=".($year-1).'"'."><i class='fas fa-angle-left'></i></a></div>";
+        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month=12'."&&year=".($year-1).'"'."><i class='fas fa-angle-left'></i></a></div>";
         echo "<div class=' d-flex col-lg-2  justify-content-center align-items-center' style='font-size:42px;'>".date('F',strtotime("$year-$month"))."</div>";
-        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month='.($month+1)."&&year=".($year).'"'."><i class='fas fa-angle-right'></i></a></div>";
+        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month='.($month+1)."&&year=".($year).'"'."><i class='fas fa-angle-right'></i></a></div>";
     }else {
-        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month='.($month-1)."&&year=".($year).'"'."><i class='fas fa-angle-left'></i></a></div>";
+        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month='.($month-1)."&&year=".($year).'"'."><i class='fas fa-angle-left'></i></a></div>";
         echo "<div class=' d-flex col-lg-2  justify-content-center align-items-center' style='font-size:42px;'>".date('F',strtotime("$year-$month"))."</div>";
-        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="calender.php?month='.($month+1)."&&year=".($year).'"'."><i class='fas fa-angle-right'></i></a></div>";
+        echo '<div class=" d-lg-flex  d-none col-lg-5  justify-content-center align-items-center" style="font-size:30px;"><a href="index.php?month='.($month+1)."&&year=".($year).'"'."><i class='fas fa-angle-right'></i></a></div>";
         
     }
     
@@ -106,7 +106,7 @@ a:hover {
     echo "<div class='d-flex flex-row w-100 ' style='height:350px;' >";//物件外框
     echo "<div class='d-lg-flex  flex-column  col-lg-2 d-none'>";
     //圖案 對話框 回當日時間
-    echo '<a href="calender.php"><div class="position-relative"><img src="image/textbox1.png"></div>';
+    echo '<a href="index.php"><div class="position-relative"><img src="image/textbox1.png"></div>';
     echo '<div ><img src="image/ghosticon1.png"></div>';
     $today=date('m/d');
     $thisMonth=date('m');
@@ -171,7 +171,7 @@ a:hover {
     echo "<div class='d-lg-flex d-none col-lg-2 align-items-center '>";//選擇要去的年月 -->
     ?>
    
-    <form action="calender.php" method="GET" >
+    <form action="index.php" method="GET" >
     <div class="form-row">
     <div class="form-group col-md-12">
       <label for="inputmonth">Month</label>
