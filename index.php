@@ -63,7 +63,7 @@ a:hover {
         }
         
     }else {
-        $month=date('m',strtotime("now"));
+        $month=date('n',strtotime("now"));
     };
    
     if (!empty($_GET["year"])) {
